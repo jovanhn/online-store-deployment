@@ -1,0 +1,18 @@
+resources:
+- resources/bff-store.yaml
+
+namespace: <NAMESPACE>
+
+patchesStrategicMerge:
+- config/annotations.yaml
+- config/images.yaml
+- config/config-map-ref.yaml
+- config/local/<BRANCH>/ports.yaml
+
+configMapGenerator:
+- name: bff-store-properties-<BRANCH>
+  env: config/local/<BRANCH>/bff-store.properties  
+
+#secretGenerator 
+generatorOptions:
+  disableNameSuffixHash: true
