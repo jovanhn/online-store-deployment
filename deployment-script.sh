@@ -2,6 +2,8 @@
 cd ./kube
 # export BRANCH=${CI_COMMIT_REF_NAME}
 # export NAMESPACE=mini-${BRANCH}
+export VERSION=0.0.1
+export CI_REGISTRY_IMAGE=jovanhn
 export BRANCH=dev
 export NAMESPACE=mini-${BRANCH}
 

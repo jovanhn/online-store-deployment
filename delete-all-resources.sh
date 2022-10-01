@@ -2,8 +2,6 @@
 kubectl delete svc bff-store-service -n mini-dev
 # service "bff-store-service" deleted
 
-
-
 kubectl delete deployment bff-store -n mini-dev
 # deployment.apps "bff-store" deleted
 
