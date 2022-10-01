@@ -19,25 +19,8 @@ spec:
       containers:
       - name: bff-store
         imagePullPolicy: Always
-        volumeMounts:
-        - mountPath: /oauth/security-config.json
-          name: security-config-bff-store
-          subPath: security-config.json
       imagePullSecrets:
       - name: regcred
-      tolerations:
-      - key: <TOLERATIONS_KEY>
-        operator: "Equal"
-        value: "True"
-      nodeSelector:
-        applications: <NODE_AFFINITY>
-      volumes:
-      - configMap:
-          items:
-            - key: security-config.json
-              path: security-config.json
-          name: security-config-bff-store
-        name: security-config-bff-store
 ---
 apiVersion: v1
 kind: Service

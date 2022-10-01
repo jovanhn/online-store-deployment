@@ -1,5 +1,6 @@
 resources:
 - resources/bff-store.yaml
+- resources/ingress.yaml
 
 namespace: <NAMESPACE>
 
