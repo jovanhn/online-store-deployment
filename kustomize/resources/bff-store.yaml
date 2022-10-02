@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bff-store
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bff-store
+  template:
+    metadata: 
+      labels:
+        app: bff-store
+      annotations:
+        prometheus.io/path: "/actuator/prometheus"
+        prometheus.io/port: "8080"
+        prometheus.io/scrape: "true"
+    spec:
+      containers:
+      - name: bff-store
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bff-store-service
+spec:
+  selector:
+    app: bff-store

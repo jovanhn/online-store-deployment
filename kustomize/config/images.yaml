@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bff-store
+spec:
+  template:
+    spec:
+      containers:
+      - name: bff-store
+        image: jovanhn/bff-store:0.0.1

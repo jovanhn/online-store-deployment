@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bff-store
+spec:
+  template:
+    metadata:
+      annotations:
+        gitlab-commit-ref: ""
+        gitlab-pipeline-ref: ""

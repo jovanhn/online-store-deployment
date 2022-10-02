@@ -32,5 +32,5 @@ sed -i "s~<NODE_AFFINITY>~\"${NODE_AFFINITY}\"~g" *
 sed -i "s~<SUFFIX>~~g" bff-store.yaml
 cd ..
 
-kubectl kustomize ./
-kubectl apply -k .
+# kubectl kustomize ./
+# kubectl apply -k .
