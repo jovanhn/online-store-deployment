@@ -4,7 +4,7 @@ cd ./kube
 # export NAMESPACE=mini-${BRANCH}
 export VERSION=0.0.1
 export CI_REGISTRY_IMAGE=jovanhn
-export BRANCH=dev
+export BRANCH=test
 export NAMESPACE=mini-${BRANCH}
 
 # kustomization
@@ -33,4 +33,4 @@ sed -i "s~<SUFFIX>~~g" bff-store.yaml
 cd ..
 
 kubectl kustomize ./
-kubectl apply -k .
+# kubectl apply -k .

@@ -12,7 +12,12 @@ patchesStrategicMerge:
 
 configMapGenerator:
 - name: bff-store-properties-<BRANCH>
-  env: config/local/<BRANCH>/bff-store.properties  
+  env: config/local/<BRANCH>/bff-store.properties
+
+secretGenerator:
+  - name: db-secret
+    files:
+    - config/local/<BRANCH>/db_creds.txt
 
 #secretGenerator 
 generatorOptions:
